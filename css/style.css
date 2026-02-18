@@ -547,6 +547,13 @@ section {
   z-index: 1;
   background: rgba(69, 80, 91, 0.8);
 }
+/* Ensure portfolio thumbnails display fully and uniformly */
+.portfolio .portfolio-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 .portfolio .portfolio-wrap::before {
   content: "";
   background: rgba(255, 255, 255, 0.7);

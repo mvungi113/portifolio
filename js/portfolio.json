@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Ecommerce App",
+    "category": "app",
+    "image": "images/refference/ecommerce app.png",
+    "type": "Mobile Application",
+    "description": "A modern e-commerce mobile application built with Flutter, featuring a clean UI, smooth animations, and comprehensive shopping features."
+  },
+  {
+    "title": "Anaby Green",
+    "category": "web",
+    "image": "images/refference/anabygreen.png",
+    "type": "Web",
+    "description": "Premium organic fertilizers and expert agricultural solutions to grow healthier crops, protect the environment, and empower Tanzanian farmers."
+  },
+  {
+    "title": "Train booking app",
+    "category": "app",
+    "image": "images/app%202.jpg",
+    "type": "Mobile Application",
+    "description": "Train ticket booking UX"
+  },
+  {
+    "title": "Audio Music UI",
+    "category": "card",
+    "image": "images/home%20screen.png",
+    "type": "App Design",
+    "description": "Music player UI concept"
+  },
+  {
+    "title": "Student Management System",
+    "category": "web",
+    "image": "images/student%20management%20system.PNG",
+    "type": "Website",
+    "description": "School management web app"
+  },
+  {
+    "title": "Online Food Order",
+    "category": "web",
+    "image": "images/food%20web.PNG",
+    "type": "Website",
+    "description": "Food ordering platform"
+  }
+]
