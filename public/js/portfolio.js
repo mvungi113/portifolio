@@ -1,103 +1,170 @@
-document.addEventListener('DOMContentLoaded', function () {
+;(function initPortfolio() {
+  'use strict';
+
   const container = document.getElementById('portfolio-container');
   if (!container) return;
 
-  let portfolioItems = [];
+  let itemsCache = [];
 
-  function renderItems(items) {
-    portfolioItems = items;
-    items.forEach(function (item, index) {
-      const col = document.createElement('div');
-      col.className = 'col-lg-4 col-md-6 portfolio-item filter-' + item.category;
+  const normalizeImage = (path) => {
+    if (!path) return '';
+    path = path.replace(/^\/*/, '');
+    return '/' + encodeURI(path);
+  };
 
-      col.innerHTML = `
-        <a href="#" data-index="${index}" class="portfolio-link-stretch">
-          <div class="portfolio-wrap">
-            <img src="${item.image}" class="img-fluid" style="width:100%;height:220px;object-fit:cover;" alt="${item.title}">
-            <div class="portfolio-info">
-              <h4>${item.title}</h4>
-              <p>${item.type}</p>
-            </div>
-          </div>
+  const clearContainer = () => {
+    container.innerHTML = '';
+  };
+
+  const createCard = (item, idx) => {
+    const col = document.createElement('div');
+    const category = (item.category || 'web').toLowerCase();
+    col.className = `col-lg-4 col-md-6 portfolio-item filter-${category}`;
+
+    const imageUrl = normalizeImage(item.image);
+
+    col.innerHTML = `
+      <div class="portfolio-wrap">
+        <a href="${imageUrl}" class="portfolio-lightbox" data-gallery="portfolio">
+          <img src="${imageUrl}" loading="lazy" class="img-fluid" style="width:100%;height:220px;object-fit:cover;" alt="${escapeHtml(item.title)}">
         </a>
-      `;
+        <div class="portfolio-info">
+          <h4>${escapeHtml(item.title)}</h4>
+          <p>${escapeHtml(item.type || '')}</p>
+          <div class="portfolio-actions">
+            <button type="button" class="btn btn-sm btn-outline-primary js-portfolio-details" data-index="${idx}">Details</button>
+          </div>
+        </div>
+      </div>`;
 
-      container.appendChild(col);
+    return col;
+  };
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str).replace(/[&<>"]+/g, function (s) {
+      return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[s];
     });
   }
 
-  // Delegate clicks on portfolio cards to open modal with details
-  container.addEventListener('click', function (e) {
-    const a = e.target.closest('.portfolio-link-stretch');
-    if (!a) return;
-    e.preventDefault();
-    const idx = parseInt(a.getAttribute('data-index'), 10);
-    if (isNaN(idx) || !portfolioItems[idx]) return;
-    openPortfolioModal(portfolioItems[idx]);
-  });
+  const render = (items) => {
+    itemsCache = items || [];
+    clearContainer();
+    if (!itemsCache.length) {
+      container.innerHTML = '<div class="col-12 text-center text-muted">No portfolio items found.</div>';
+      return;
+    }
 
-  function openPortfolioModal(item) {
+    const fragment = document.createDocumentFragment();
+    itemsCache.forEach((it, i) => fragment.appendChild(createCard(it, i)));
+    container.appendChild(fragment);
+
+    // initialize lightbox
+    if (typeof GLightbox === 'function') {
+      try { window._portfolioGL = GLightbox({ selector: '.portfolio-lightbox' }); } catch (e) { /* ignore */ }
+    }
+
+    // initialize isotope if available
+    if (typeof Isotope === 'function') {
+      try {
+        // if previous isotope exists, destroy then re-create
+        if (container._isotopeInstance && typeof container._isotopeInstance.destroy === 'function') {
+          container._isotopeInstance.destroy();
+        }
+        container._isotopeInstance = new Isotope(container, { itemSelector: '.portfolio-item', percentPosition: true, masonry: { columnWidth: '.portfolio-item' } });
+      } catch (e) { console.warn('Isotope init failed', e); }
+    }
+
+    // ensure AOS recalculates
+    if (typeof AOS !== 'undefined' && AOS && typeof AOS.refresh === 'function') AOS.refresh();
+  };
+
+  const openModal = (item) => {
     const modalEl = document.getElementById('portfolioModal');
     if (!modalEl) return;
     const titleEl = modalEl.querySelector('.modal-title');
     const bodyEl = modalEl.querySelector('.modal-body');
-
     titleEl.textContent = item.title || '';
     bodyEl.innerHTML = `
       <div class="row">
-        <div class="col-md-6">
-          <img src="${item.image}" alt="${item.title}" style="width:100%;height:auto;max-height:60vh;object-fit:contain;" class="img-fluid">
+        <div class="col-md-6 mb-3">
+          <img src="${normalizeImage(item.image)}" alt="${escapeHtml(item.title)}" class="img-fluid" style="width:100%;height:auto;object-fit:contain;max-height:60vh;">
         </div>
         <div class="col-md-6">
-          <h5>${item.title}</h5>
-          <p>${item.description || ''}</p>
+          <h5>${escapeHtml(item.title)}</h5>
+          <p>${escapeHtml(item.description || '')}</p>
           <ul class="list-unstyled">
-            <li><strong>Category:</strong> ${item.category || ''}</li>
-            <li><strong>Type:</strong> ${item.type || ''}</li>
+            <li><strong>Category:</strong> ${escapeHtml(item.category || '')}</li>
+            <li><strong>Type:</strong> ${escapeHtml(item.type || '')}</li>
           </ul>
-          <p class="mt-2">
-            <a href="${item.image}" target="_blank" rel="noopener" class="btn btn-outline-primary">Open Image</a>
-            ${item.source? `<a href="${item.source}" target="_blank" rel="noopener" class="btn btn-primary" style="margin-left:8px;">Source Code</a>`: ''}
-          </p>
         </div>
-      </div>
-    `;
+      </div>`;
 
-    // show modal via Bootstrap
     if (window.bootstrap && typeof window.bootstrap.Modal === 'function') {
-      const bsModal = new bootstrap.Modal(modalEl);
-      bsModal.show();
+      try {
+        const bs = new bootstrap.Modal(modalEl);
+        bs.show();
+      } catch (e) { modalEl.style.display = 'block'; }
     } else {
-      // fallback: make modal visible
       modalEl.style.display = 'block';
     }
-  }
+  };
 
-  function loadFromInline() {
-    const script = document.getElementById('portfolio-data');
-    if (!script) {
-      container.innerHTML = '<p class="text-danger">Failed to load portfolio items.</p>';
-      return;
-    }
-    try {
-      const items = JSON.parse(script.textContent);
-      renderItems(items);
-    } catch (e) {
-      console.error('Failed to parse inline portfolio data:', e);
-      container.innerHTML = '<p class="text-danger">Failed to load portfolio items.</p>';
-    }
-  }
-
-  fetch('js/portfolio.json')
-    .then(function (res) {
-      if (!res.ok) throw new Error('Network response was not ok');
-      return res.json();
-    })
-    .then(function (items) {
-      renderItems(items);
-    })
-    .catch(function (err) {
-      console.warn('Fetch failed, trying inline portfolio data fallback:', err);
-      loadFromInline();
+  // Filters handling
+  const initFilters = () => {
+    const filters = document.querySelectorAll('#portfolio-flters li');
+    if (!filters || !filters.length) return;
+    filters.forEach((li) => {
+      li.addEventListener('click', function (e) {
+        e.preventDefault();
+        filters.forEach(el => el.classList.remove('filter-active'));
+        this.classList.add('filter-active');
+        const filter = this.getAttribute('data-filter');
+        if (container._isotopeInstance && typeof container._isotopeInstance.arrange === 'function') {
+          container._isotopeInstance.arrange({ filter: filter === '*' ? '*' : filter });
+          container._isotopeInstance.on('arrangeComplete', function () { if (typeof AOS !== 'undefined' && AOS && typeof AOS.refresh === 'function') AOS.refresh(); });
+        } else {
+          // fallback: show/hide
+          const items = container.querySelectorAll('.portfolio-item');
+          items.forEach(it => {
+            if (filter === '*' || it.classList.contains(filter.replace('.', ''))) it.style.display = '';
+            else it.style.display = 'none';
+          });
+        }
+      });
     });
-});
+  };
+
+  // Event delegation for details button
+  container.addEventListener('click', function (e) {
+    const btn = e.target.closest('.js-portfolio-details');
+    if (!btn) return;
+    const idx = parseInt(btn.getAttribute('data-index'), 10);
+    if (isNaN(idx) || !itemsCache[idx]) return;
+    openModal(itemsCache[idx]);
+  });
+
+  // Load data: try JSON file then fallback to inline script
+  const loadData = async () => {
+    let data = null;
+    try {
+      const res = await fetch('/js/portfolio.json', { cache: 'no-store' });
+      if (res && res.ok) data = await res.json();
+    } catch (e) { /* ignore */ }
+    if (!data) {
+      const script = document.getElementById('portfolio-data');
+      if (script) {
+        try { data = JSON.parse(script.textContent); } catch (e) { console.error('Failed to parse inline portfolio data', e); }
+      }
+    }
+    if (!Array.isArray(data)) data = [];
+    render(data);
+    // init filters after render
+    initFilters();
+  };
+
+  // Ensure execution when DOM is ready
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadData);
+  else loadData();
+
+})();

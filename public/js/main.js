@@ -140,7 +140,18 @@
   let preloader = select('#preloader');
   if (preloader) {
     const removePreloader = () => {
-      if (preloader && preloader.parentNode) preloader.parentNode.removeChild(preloader);
+      try {
+        if (preloader && preloader.parentNode) preloader.parentNode.removeChild(preloader);
+        // Ensure body is visible for migrated templates
+        document.body.style.display = 'block';
+        document.body.style.visibility = 'visible';
+        document.body.style.opacity = '1';
+        // Remove any Next.js FOUC style nodes if present
+        var hides = document.querySelectorAll('[data-next-hide-fouc]');
+        hides.forEach(function(h){ if (h && h.parentNode) h.parentNode.removeChild(h); });
+      } catch (e) {
+        // ignore
+      }
     };
     if (document.readyState === 'complete') {
       removePreloader();
@@ -230,37 +241,56 @@
 
   /**
    * Portfolio details slider
+   * Initialize when Swiper is available (vendor script may load later)
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
+  runOnLoad(() => {
+    const initPortfolioDetailsSwiper = () => {
+      if (typeof Swiper === 'function') {
+        new Swiper('.portfolio-details-slider', {
+          speed: 400,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+          }
+        });
+      } else {
+        setTimeout(initPortfolioDetailsSwiper, 200);
+      }
+    };
+    initPortfolioDetailsSwiper();
   });
 
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
+  runOnLoad(() => {
+    const initTestimonialsSwiper = () => {
+      if (typeof Swiper === 'function') {
+        new Swiper('.testimonials-slider', {
+          speed: 600,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+          },
+          slidesPerView: 'auto',
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+          }
+        });
+      } else {
+        setTimeout(initTestimonialsSwiper, 200);
+      }
+    };
+    initTestimonialsSwiper();
   });
 
   /**

@@ -6,7 +6,6 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <style>{`body{display:block !important}`}</style>
         <link rel="icon" href="/images/kindo.jpg" />
         <link rel="apple-touch-icon" href="/images/kindo.jpg" />
         <link rel="stylesheet" href="/css/css.css" />
@@ -30,7 +29,17 @@ export default function App({ Component, pageProps }) {
       <Script src="/js/validate.js" strategy="afterInteractive" />
       <Script src="/js/portfolio.js" strategy="afterInteractive" />
       <Script src="/js/main.js" strategy="afterInteractive" />
-      <Script id="unhide-body" strategy="afterInteractive">{`document.body.style.display = 'block';`}</Script>
+      <Script id="unhide-body" strategy="beforeInteractive">{`(function(){
+        try{
+          // Remove Next.js FOUC hiding style if present
+          var hides = document.querySelectorAll('[data-next-hide-fouc]');
+          hides.forEach(function(h){ if (h && h.parentNode) h.parentNode.removeChild(h); });
+          // Ensure body is visible for templates that expect it
+          document.body.style.display = 'block';
+          document.body.style.visibility = 'visible';
+          document.body.style.opacity = '1';
+        }catch(e){ /* ignore */ }
+      })();`}</Script>
 
       <Component {...pageProps} />
     </>
