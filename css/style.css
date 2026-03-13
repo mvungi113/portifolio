@@ -507,6 +507,24 @@ section {
   background: #fff;
   border: 2px solid #28a56f;
 }
+.resume .language-rating-item {
+  padding-bottom: 8px;
+}
+.resume .language-rating-row {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.resume .language-name {
+  font-weight: 600;
+  color: #45505b;
+}
+.resume .language-stars {
+  color: #f7b500;
+  letter-spacing: 1px;
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/

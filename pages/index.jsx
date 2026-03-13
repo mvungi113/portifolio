@@ -47,28 +47,28 @@ export default function Home() {
                 <img src="/images/pict.gif" className="img-fluid" alt="" />
               </div>
               <div className="col-lg-8 pt-4 pt-lg-0 content">
-                <h3>UI/UX Designer &amp; Web Developer.</h3>
-                <p className="fst-italic"></p>
-                <h5>What can a "full-stack developer" do, you ask? </h5>
-                <p>I can make a Website from nothing into existence, fully formed. I do not use tricks, nor is the magic. I specialize in manipulating the very fabric of the web, it's raw materials of HTML, CSS, JavaScript, Dart, PHP, and other frameworks such as Bootstrap and Laravel.</p>
+                <h3>Front-End and Back-End Web Developer</h3>
+                <p className="fst-italic">Full-stack developer with 3 years of experience building responsive websites, management systems, and modern web platforms.</p>
+                <h5>I build practical products from interface to database.</h5>
+                <p>I develop complete web solutions using Laravel, Next.js, React, PHP, JavaScript, MySQL, and PostgreSQL. My work focuses on responsive UI, clean backend integration, and reliable systems that solve real operational problems.</p>
                 <div className="row">
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Rogasian Mvungi</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+255 769 657 633</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>Mbeya, Tanzania</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Rogasian Gelasi Haji</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+255-697-624-409</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Mbeya, Tanzania</span></li>
                     </ul>
                   </div>
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Professional:</strong> <span>Software Developer</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>wekindosdev@gmail.com</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Professional:</strong> <span>Full Stack Web Developer</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>rogashianmvugi@gmail.com</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
                     </ul>
                   </div>
                 </div>
-                <p>Also open source technologies are more helpfully in my carear. I am a custom WordPress theme and plugin development expert.</p>
-                <p>My art &amp; design Background informs idention to design though to implementation. I can plan, design, build, launch and maintain a website myself. Did I mention that I build mobile apps too? I have worked with dart and flutter to build both iOS and Android App.</p>
+                <p>Recent work includes freelance application development, an official company website for Anaby Green Company Limited, and Project Hub at MUST for managing finalist student projects.</p>
+                <p>Beyond web development, I have worked with Flutter, Supabase, GIS data systems, and technical support environments, which gives me a broader view of how software fits into real organizations.</p>
               </div>
             </div>
 
@@ -91,7 +91,7 @@ export default function Home() {
               <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
                 <div className="count-box">
                   <i className="bi bi-journal-richtext"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" className="purecounter"></span>
+                  <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" className="purecounter"></span>
                   <p>Projects</p>
                 </div>
               </div>
@@ -117,52 +117,70 @@ export default function Home() {
           <div className="container" data-aos="fade-up">
             <div className="section-title">
               <h2>Skills</h2>
-              <p>I use different technology to build website and Mobile application</p>
+              <p>Core technologies and tools I use to design, build, and maintain full-stack applications.</p>
             </div>
             <div className="row skills-content">
               <div className="col-lg-6">
                 <div className="progress">
-                  <span className="skill">HTML <i className="val">100%</i></span>
-                  <div className="progress-bar-wrap">
-                    <div className="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-                <div className="progress">
-                  <span className="skill">CSS <i className="val">90%</i></span>
+                  <span className="skill">Laravel &amp; PHP <i className="val">90%</i></span>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div className="progress">
-                  <span className="skill">Dart &amp; Flutter <i className="val">75%</i></span>
+                  <span className="skill">React &amp; Next.js <i className="val">88%</i></span>
                   <div className="progress-bar-wrap">
-                    <div className="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div className="progress">
-                  <span className="skill">JavaScript <i className="val">75%</i></span>
+                  <span className="skill">JavaScript <i className="val">85%</i></span>
                   <div className="progress-bar-wrap">
-                    <div className="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div className="progress">
-                  <span className="skill">Bootstrap <i className="val">80%</i></span>
+                  <span className="skill">MySQL &amp; PostgreSQL <i className="val">82%</i></span>
                   <div className="progress-bar-wrap">
-                    <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div className="progress">
+                  <span className="skill">HTML, CSS &amp; Tailwind CSS <i className="val">92%</i></span>
+                  <div className="progress-bar-wrap">
+                    <div className="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="progress">
-                  <span className="skill">PHP &amp; Laravel <i className="val">80%</i></span>
+                  <span className="skill">Supabase &amp; Firebase <i className="val">78%</i></span>
+                  <div className="progress-bar-wrap">
+                    <div className="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div className="progress">
+                  <span className="skill">Git &amp; GitHub <i className="val">84%</i></span>
+                  <div className="progress-bar-wrap">
+                    <div className="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div className="progress">
+                  <span className="skill">Livewire &amp; REST API Integration <i className="val">80%</i></span>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
                 <div className="progress">
-                  <span className="skill">Photoshop, Adobe XD &amp; Figma <i className="val">85%</i></span>
+                  <span className="skill">Flutter <i className="val">72%</i></span>
                   <div className="progress-bar-wrap">
-                    <div className="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div className="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div className="progress">
+                  <span className="skill">Figma &amp; Adobe XD <i className="val">76%</i></span>
+                  <div className="progress-bar-wrap">
+                    <div className="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
@@ -174,7 +192,7 @@ export default function Home() {
           <div className="container" data-aos="fade-up">
             <div className="section-title">
               <h2>Resume</h2>
-              <p>Professional profile and background information.</p>
+              <p>Profile, education, and recent experience based on my current resume.</p>
             </div>
             <div className="row">
               <div className="col-lg-6">
@@ -185,6 +203,8 @@ export default function Home() {
                   <p>Dynamic and creative frontend and backend developer with 3 years of experience delivering visually stunning and user-friendly digital experiences. Passionate about leveraging design principles and technology to develop innovative solutions that meet the needs of clients and end-users. Eager to contribute my skills and expertise to a collaborative team.</p>
                   <ul>
                     <li>Tanzania, Mbeya</li>
+                    <li>https://mvungi-rogasian.vercel.app</li>
+                    <li>github.com/mvungi113</li>
                     <li>+255-697-624-409</li>
                     <li>rogashianmvugi@gmail.com</li>
                   </ul>
@@ -195,27 +215,71 @@ export default function Home() {
                   <h5>2022 - 2025</h5>
                   <p><em>Bachelor of Computer Science (BCS)</em></p>
                 </div>
+                <div className="resume-item">
+                  <h4>Mbeya University of Science and Technology (MUST)</h4>
+                  <h5>2019 - 2022</h5>
+                  <p><em>Diploma in Information and Communication Technology (DICT)</em></p>
+                </div>
+                <div className="resume-item">
+                  <h4>Nyerere Secondary School</h4>
+                  <h5>2015 - 2018</h5>
+                  <p><em>Certificate of Secondary Education Examination (CSEE)</em></p>
+                </div>
+                <h3 className="resume-title">Languages</h3>
+                <div className="resume-item language-rating-item">
+                  <p className="language-rating-row">
+                    <span className="language-name">English</span>
+                    <span className="language-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                  </p>
+                </div>
+                <div className="resume-item language-rating-item pb-0">
+                  <p className="language-rating-row">
+                    <span className="language-name">Swahili</span>
+                    <span className="language-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </p>
+                </div>
               </div>
               <div className="col-lg-6">
                 <h3 className="resume-title">Professional Experience</h3>
                 <div className="resume-item">
-                  <h4>Web Developer &amp; Website Maintainer</h4>
+                  <h4>Web Developer (Freelance)</h4>
                   <h5>2025 - Present</h5>
-                  <p><em>Self / Freelance</em></p>
+                  <p><em>Mbeya</em></p>
                   <ul>
-                    <li>Developed and maintained company and client websites to ensure stability and smooth performance.</li>
-                    <li>Implemented responsive UI using HTML, CSS, Tailwind, and JavaScript (React/Next.js).</li>
-                    <li>Built backend APIs and managed databases (MySQL, PostgreSQL) with PHP/Laravel and Supabase.</li>
+                    <li>Developed and maintained web applications using Laravel, Next.js, React, PHP, JavaScript, MySQL, and PostgreSQL.</li>
+                    <li>Built dynamic platforms including blogs, management systems, and portfolio websites.</li>
+                    <li>Integrated REST APIs and databases including MySQL, PostgreSQL, and Supabase.</li>
+                    <li>Tested, debugged, and optimized applications for performance, usability, and security.</li>
                   </ul>
                 </div>
-                <h3 className="resume-title">Skills</h3>
                 <div className="resume-item">
-                  <h4>Languages &amp; Frameworks</h4>
-                  <p>PHP, Laravel, HTML, CSS, Tailwind, JavaScript, Next.js, React.js</p>
-                  <h4>Tools &amp; Platforms</h4>
-                  <p>cPanel, Git &amp; GitHub, Figma, Adobe XD, Firebase, Supabase</p>
-                  <h4>Databases</h4>
-                  <p>MySQL, PostgreSQL</p>
+                  <h4>Full Stack Web Developer</h4>
+                  <h5>12/2025 - 02/2026</h5>
+                  <p><em>Anaby Green Company Limited, Mbeya</em></p>
+                  <ul>
+                    <li>Developed the official company website using Laravel, MySQL, Tailwind CSS, and Livewire.</li>
+                    <li>Designed responsive interfaces and implemented backend content management features.</li>
+                    <li>Optimized the website for performance, reliability, and security.</li>
+                  </ul>
+                </div>
+                <div className="resume-item">
+                  <h4>Full Stack Developer (Team Project)</h4>
+                  <h5>07/2025 - 12/2025</h5>
+                  <p><em>Mbeya University of Science and Technology (MUST), Mbeya</em></p>
+                  <ul>
+                    <li>Contributed to Project Hub, a system for managing finalist student projects at MUST.</li>
+                    <li>Built responsive interfaces with Next.js and React and integrated Supabase as the backend database.</li>
+                    <li>Implemented project submission, supervision, evaluation, and tracking workflows using Git and GitHub for collaboration.</li>
+                  </ul>
+                </div>
+                <div className="resume-item">
+                  <h4>Network Support Intern</h4>
+                  <h5>07/2024 - 09/2024</h5>
+                  <p><em>Tanzania Telecommunication Corporation Limited (TTCL), Mbeya</em></p>
+                  <ul>
+                    <li>Assisted with network device configuration, maintenance, and troubleshooting.</li>
+                    <li>Supported data management, system monitoring, and ICT infrastructure activities.</li>
+                  </ul>
                 </div>
               </div>
             </div>
