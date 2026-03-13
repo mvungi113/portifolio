@@ -23,11 +23,12 @@ export default function Home() {
           <h1>Rogasian Mvungi</h1>
           <p>I'm <span className="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
           <div className="social-links">
-            <a href="/mvungi113.html" className="twitter"><i className="bx bxl-github"></i></a>
-            <a href="https://twitter.com/rogasiani_" className="twitter"><i className="bx bxl-twitter"></i></a>
-            <a href="/rogasiangelasi.html" className="instagram"><i className="bx bxl-instagram"></i></a>
-            <a href="/send_1.html" className="whatsapp"><i className="bx bxl-whatsapp"></i></a>
-            <a href="/public-profile.html" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/mvungi113" className="twitter"><i className="bx bxl-github"></i></a>
+            <a href="https://x.com/rogasiani_" className="twitter"><i className="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/rogasiangelasi" className="instagram"><i className="bx bxl-instagram"></i></a>
+            <a href="https://wa.me/255697624409" className="whatsapp"><i className="bx bxl-whatsapp"></i></a>
+            <a href="https://www.facebook.com/rogasian.gelas" className="facebook"><i className="bx bxl-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" className="linkedin"><i className="bx bxl-linkedin"></i></a>
           </div>
           <br />
         </div>
@@ -55,7 +56,7 @@ export default function Home() {
                   <div className="col-lg-6">
                     <ul>
                       <li><i className="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Rogasian Gelasi Haji</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+255-697-624-409</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+255697624409</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Mbeya, Tanzania</span></li>
                     </ul>
                   </div>
@@ -84,21 +85,21 @@ export default function Home() {
               <div className="col-lg-3 col-md-6">
                 <div className="count-box">
                   <i className="bi bi-emoji-smile"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" className="purecounter"></span>
+                  <span>4+</span>
                   <p>Happy Clients</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
                 <div className="count-box">
                   <i className="bi bi-journal-richtext"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" className="purecounter"></span>
+                  <span>6+</span>
                   <p>Projects</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
                 <div className="count-box">
                   <i className="bi bi-headset"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" className="purecounter"></span>
+                  <span>1463+</span>
                   <p>Hours Of Support</p>
                 </div>
               </div>
@@ -204,8 +205,8 @@ export default function Home() {
                   <ul>
                     <li>Tanzania, Mbeya</li>
                     <li>https://mvungi-rogasian.vercel.app</li>
-                    <li>github.com/mvungi113</li>
-                    <li>+255-697-624-409</li>
+                    <li>https://github.com/mvungi113</li>
+                    <li>+255697624409</li>
                     <li>rogashianmvugi@gmail.com</li>
                   </ul>
                 </div>
@@ -439,11 +440,12 @@ export default function Home() {
             <h3>Rogasian Mvungi</h3>
             <p>full-stack Developer</p>
             <div className="social-links">
-              <a href="/wekindos.html" className="twitter"><i className="bx bxl-github"></i></a>
-              <a href="https://twitter.com/mvungirogashian" className="twitter"><i className="bx bxl-twitter"></i></a>
-              <a href="/send.html" className="whatsapp"><i className="bx bxl-whatsapp"></i></a>
-              <a href="/wekindosdev.html" className="instagram"><i className="bx bxl-instagram"></i></a>
-              <a href="/public-profile.html" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/mvungi113" className="twitter"><i className="bx bxl-github"></i></a>
+              <a href="https://x.com/rogasiani_" className="twitter"><i className="bx bxl-twitter"></i></a>
+              <a href="https://wa.me/255697624409" className="whatsapp"><i className="bx bxl-whatsapp"></i></a>
+              <a href="https://www.instagram.com/rogasiangelasi" className="instagram"><i className="bx bxl-instagram"></i></a>
+              <a href="https://www.facebook.com/rogasian.gelas" className="facebook"><i className="bx bxl-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" className="linkedin"><i className="bx bxl-linkedin"></i></a>
             </div>
             <div className="copyright">© Copyright <strong><span>Wekindos devs</span></strong>. All Rights Reserved</div>
             <div className="credits"></div>
