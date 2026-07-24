@@ -92,7 +92,7 @@ export default function Home() {
               <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
                 <div className="count-box">
                   <i className="bi bi-journal-richtext"></i>
-                  <span>6+</span>
+                  <span>9+</span>
                   <p>Projects</p>
                 </div>
               </div>
@@ -304,52 +304,80 @@ export default function Home() {
             </div>
             <div id="portfolio-container" className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
               </div>
-              <script id="portfolio-data" type="application/json" dangerouslySetInnerHTML={{__html: `
-    [
+              <script id="portfolio-data" type="application/json" dangerouslySetInnerHTML={{__html: JSON.stringify([
       {
-        "title": "Kilimo App",
+        "title": "Ecommerce App",
         "category": "app",
-        "image": "images/soil%20npk.png",
+        "image": "images/refference/ecommerce app.png",
+        "source": "https://github.com/mvungi113/ecommerce",
         "type": "Mobile Application",
-        "description": "Agriculture helper mobile app"
+        "description": "A modern e-commerce mobile application built with Flutter, featuring a clean UI, smooth animations, and comprehensive shopping features."
       },
       {
-        "title": "Coffee Website",
+        "title": "Anaby Green",
         "category": "web",
-        "image": "images/coffee.PNG",
+        "image": "images/refference/anabygreen.png",
+        "source": "https://anabygreen.co.tz/",
         "type": "Web",
-        "description": "Coffee shop website"
+        "description": "Premium organic fertilizers and expert agricultural solutions to grow healthier crops, protect the environment, and empower Tanzanian farmers."
       },
       {
-        "title": "Train booking app",
+        "title": "Blog Hub",
+        "category": "web",
+        "image": "images/refference/bloghub.png",
+        "source": "https://charming-blog.vercel.app",
+        "type": "Website",
+        "description": "A simple yet elegant blog platform for sharing knowledge and experiences."
+      },
+      {
+        "title": "Smart Warehouse Management System",
+        "category": "web",
+        "image": "images/refference/inventory.png",
+        "source": "https://tanzania-stock-flow.vercel.app/",
+        "type": "Website",
+        "description": "A comprehensive warehouse management system for tracking inventory and optimizing operations."
+      },
+      {
+        "title": "Inventory Mobile App",
         "category": "app",
-        "image": "images/app%202.jpg",
+        "image": "images/refference/noimg.png",
+        "source": "https://github.com/mvungi113/inventory",
         "type": "Mobile Application",
-        "description": "Train ticket booking UX"
+        "description": "Simple Mobile App for inventory management, allowing users to track and manage their stock on the go."
       },
       {
-        "title": "Audio Music UI",
-        "category": "card",
-        "image": "images/home%20screen.png",
-        "type": "App Design",
-        "description": "Music player UI concept"
-      },
-      {
-        "title": "Student Management System",
+        "title": "Clearance Management System",
         "category": "web",
-        "image": "images/student%20management%20system.PNG",
+        "image": "images/refference/noimg.png",
+        "source": "https://github.com/mvungi113/clearance-MS",
         "type": "Website",
-        "description": "School management web app"
+        "description": "A system for managing clearance processes in educational institutions."
       },
       {
-        "title": "Online Food Order",
+        "title": "Off-Campus Management System",
         "category": "web",
-        "image": "images/food%20web.PNG",
+        "image": "images/refference/noimg.png",
+        "source": "https://github.com/mvungi113/off-campus",
         "type": "Website",
-        "description": "Food ordering platform"
+        "description": "A system for managing off-campus processes in educational institutions."
+      },
+      {
+        "title": "Zoo Surveillance Management System",
+        "category": "web",
+        "image": "images/refference/noimg.png",
+        "source": "https://github.com/mvungi113/zoo-mis",
+        "type": "Website",
+        "description": "A system for managing zoo surveillance operations and animal tracking."
+      },
+      {
+        "title": "Manage Product Expiration System",
+        "category": "web",
+        "image": "images/refference/noimg.png",
+        "source": "https://github.com/mvungi113/manage_product_exp",
+        "type": "Website",
+        "description": "A system for managing product expiration dates and inventory in retail environments."
       }
-    ]
-              `}} />
+    ])}} />
           </div>
         </section>
 
