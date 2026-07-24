@@ -518,8 +518,8 @@ export default function Home() {
 
         <footer id="footer">
           <div className="container">
-            <div className="row">
-              <div className="col-lg-4">
+            <div className="row gy-4">
+              <div className="col-lg-4 col-md-6">
                 <div className="footer-brand">
                   <h3>Rogasian Mvungi</h3>
                   <p>Full-Stack Developer</p>
@@ -534,38 +534,42 @@ export default function Home() {
                   <a href="https://www.facebook.com/rogasian.gelas" target="_blank" rel="noopener"><i className="bx bxl-facebook"></i></a>
                 </div>
               </div>
-              <div className="col-lg-2 col-md-4">
+              <div className="col-lg-4 col-md-6">
                 <h4 className="footer-title">Quick Links</h4>
                 <ul className="footer-links">
-                  <li><a href="#hero">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#resume">Resume</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#services">Services</a></li>
+                  <li><a href="#hero"><i className="bx bx-home"></i> Home</a></li>
+                  <li><a href="#about"><i className="bx bx-user"></i> About</a></li>
+                  <li><a href="#resume"><i className="bx bx-file"></i> Resume</a></li>
+                  <li><a href="#portfolio"><i className="bx bx-briefcase"></i> Portfolio</a></li>
+                  <li><a href="#services"><i className="bx bx-server"></i> Services</a></li>
                 </ul>
               </div>
-              <div className="col-lg-3 col-md-4">
-                <h4 className="footer-title">Services</h4>
-                <ul className="footer-links">
-                  <li><a href="#services">Web Development</a></li>
-                  <li><a href="#services">Mobile Apps</a></li>
-                  <li><a href="#services">UI/UX Design</a></li>
-                  <li><a href="#services">Backend &amp; API</a></li>
-                  <li><a href="#services">Database Design</a></li>
-                </ul>
-              </div>
-              <div className="col-lg-3 col-md-4">
+              <div className="col-lg-4 col-md-6">
                 <h4 className="footer-title">Contact</h4>
                 <ul className="footer-contact">
-                  <li><i className="bx bx-phone"></i> +255697624409</li>
-                  <li><i className="bx bx-envelope"></i> rogashianmvugi@gmail.com</li>
-                  <li><i className="bx bx-map"></i> Mbeya, Tanzania</li>
-                  <li><i className="bx bx-check-circle"></i> Available for Freelance</li>
+                  <li>
+                    <div className="contact-icon"><i className="bx bx-phone"></i></div>
+                    <div><span className="contact-label">Phone</span>+255 697 624 409</div>
+                  </li>
+                  <li>
+                    <div className="contact-icon"><i className="bx bx-envelope"></i></div>
+                    <div><span className="contact-label">Email</span>rogashianmvugi@gmail.com</div>
+                  </li>
+                  <li>
+                    <div className="contact-icon"><i className="bx bx-map"></i></div>
+                    <div><span className="contact-label">Location</span>Mbeya, Tanzania</div>
+                  </li>
+                  <li>
+                    <div className="contact-icon available"><i className="bx bx-check-circle"></i></div>
+                    <div><span className="contact-label">Status</span>Available for Freelance</div>
+                  </li>
                 </ul>
               </div>
             </div>
             <div className="footer-bottom">
-              <p>&copy; {new Date().getFullYear()} <strong>Rogasian Mvungi</strong>. All Rights Reserved</p>
+              <div className="footer-bottom-inner">
+                <p>&copy; {new Date().getFullYear()} <strong>Rogasian Mvungi</strong>. All Rights Reserved</p>
+              </div>
             </div>
           </div>
         </footer>
