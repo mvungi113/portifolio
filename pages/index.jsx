@@ -77,76 +77,92 @@ export default function Home() {
 
         <section id="about" className="about">
           <div className="container" data-aos="fade-up">
-
             <div className="section-title">
-              <h2>About</h2>
+              <h2>About Me</h2>
+              <p>Passionate developer building impactful digital solutions</p>
             </div>
-
-            <div className="row">
+            <div className="row align-items-center">
               <div className="col-lg-4">
-                <img src="/images/pict.gif" className="img-fluid" alt="" />
-              </div>
-              <div className="col-lg-8 pt-4 pt-lg-0 content">
-                <h3>Front-End and Back-End Web Developer</h3>
-                <p className="fst-italic">Full-stack developer with 3 years of experience building responsive websites, management systems, and modern web platforms.</p>
-                <h5>I build practical products from interface to database.</h5>
-                <p>I develop complete web solutions using Laravel, Next.js, React, PHP, JavaScript, MySQL, and PostgreSQL. My work focuses on responsive UI, clean backend integration, and reliable systems that solve real operational problems.</p>
-                <div className="row">
-                  <div className="col-lg-6">
-                    <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Name:</strong> <span>Rogasian Gelasi Haji</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+255697624409</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Mbeya, Tanzania</span></li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-6">
-                    <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Professional:</strong> <span>Full Stack Web Developer</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Email:</strong> <span>rogashianmvugi@gmail.com</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                    </ul>
+                <div className="about-profile-card">
+                  <img src="/images/pict.gif" className="about-img" alt="Rogasian Mvungi" />
+                  <div className="about-profile-info">
+                    <h3>Rogasian Gelasi Haji</h3>
+                    <p className="about-role">Full Stack Web Developer</p>
+                    <div className="about-contact-grid">
+                      <div><i className="bx bx-map"></i> Mbeya, Tanzania</div>
+                      <div><i className="bx bx-envelope"></i> rogashianmvugi@gmail.com</div>
+                      <div><i className="bx bx-phone"></i> +255697624409</div>
+                      <div><i className="bx bx-briefcase"></i> Freelance Available</div>
+                    </div>
                   </div>
                 </div>
-                <p>Recent work includes freelance application development, an official company website for Anaby Green Company Limited, and Project Hub at MUST for managing finalist student projects.</p>
-                <p>Beyond web development, I have worked with Flutter, Supabase, GIS data systems, and technical support environments, which gives me a broader view of how software fits into real organizations.</p>
+              </div>
+              <div className="col-lg-8">
+                <div className="about-content">
+                  <h3>Full-Stack Web Developer</h3>
+                  <p className="about-highlight">Full-stack developer with 3+ years of experience building responsive websites, management systems, and modern web platforms.</p>
+                  <p>I develop complete web solutions using Laravel, Next.js, React, PHP, JavaScript, MySQL, and PostgreSQL. My work focuses on responsive UI, clean backend integration, and reliable systems that solve real operational problems.</p>
+                  <div className="about-highlights">
+                    <div className="highlight-item">
+                      <i className="bx bx-check-circle"></i>
+                      <span>Responsive UI Design</span>
+                    </div>
+                    <div className="highlight-item">
+                      <i className="bx bx-check-circle"></i>
+                      <span>Full-Stack Development</span>
+                    </div>
+                    <div className="highlight-item">
+                      <i className="bx bx-check-circle"></i>
+                      <span>API Integration</span>
+                    </div>
+                    <div className="highlight-item">
+                      <i className="bx bx-check-circle"></i>
+                      <span>Database Design</span>
+                    </div>
+                    <div className="highlight-item">
+                      <i className="bx bx-check-circle"></i>
+                      <span>Mobile App Development</span>
+                    </div>
+                    <div className="highlight-item">
+                      <i className="bx bx-check-circle"></i>
+                      <span>Performance Optimization</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
           </div>
         </section>
 
         <section id="facts" className="facts">
           <div className="container" data-aos="fade-up">
-            <div className="section-title">
-              <h2>Facts</h2>
-            </div>
             <div className="row">
               <div className="col-lg-3 col-md-6">
-                <div className="count-box">
-                  <i className="bi bi-emoji-smile"></i>
-                  <span>4+</span>
+                <div className="fact-box">
+                  <div className="fact-icon"><i className="bi bi-emoji-smile"></i></div>
+                  <span className="fact-number">4+</span>
                   <p>Happy Clients</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
-                <div className="count-box">
-                  <i className="bi bi-journal-richtext"></i>
-                  <span>9+</span>
+              <div className="col-lg-3 col-md-6">
+                <div className="fact-box">
+                  <div className="fact-icon"><i className="bi bi-journal-richtext"></i></div>
+                  <span className="fact-number">9+</span>
                   <p>Projects</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                <div className="count-box">
-                  <i className="bi bi-headset"></i>
-                  <span>1463+</span>
+              <div className="col-lg-3 col-md-6">
+                <div className="fact-box">
+                  <div className="fact-icon"><i className="bi bi-headset"></i></div>
+                  <span className="fact-number">1463+</span>
                   <p>Hours Of Support</p>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-                <div className="count-box">
-                  <i className="bi bi-award"></i>
-                  <span data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" className="purecounter"></span>
-                  <p>Awards</p>
+              <div className="col-lg-3 col-md-6">
+                <div className="fact-box">
+                  <div className="fact-icon"><i className="bi bi-award"></i></div>
+                  <span className="fact-number">3+</span>
+                  <p>Years Experience</p>
                 </div>
               </div>
             </div>
@@ -161,64 +177,94 @@ export default function Home() {
             </div>
             <div className="row skills-content">
               <div className="col-lg-6">
-                <div className="progress">
-                  <span className="skill">Laravel &amp; PHP <i className="val">90%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-php"></i> Laravel &amp; PHP</span>
+                    <span className="skill-val">90%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">React &amp; Next.js <i className="val">88%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-react"></i> React &amp; Next.js</span>
+                    <span className="skill-val">88%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">JavaScript <i className="val">85%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-javascript"></i> JavaScript</span>
+                    <span className="skill-val">85%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">MySQL &amp; PostgreSQL <i className="val">82%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bx-data"></i> MySQL &amp; PostgreSQL</span>
+                    <span className="skill-val">82%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">HTML, CSS &amp; Tailwind CSS <i className="val">92%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-html5"></i> HTML, CSS &amp; Tailwind</span>
+                    <span className="skill-val">92%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-6">
-                <div className="progress">
-                  <span className="skill">Supabase &amp; Firebase <i className="val">78%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-firebase"></i> Supabase &amp; Firebase</span>
+                    <span className="skill-val">78%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">Git &amp; GitHub <i className="val">84%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-github"></i> Git &amp; GitHub</span>
+                    <span className="skill-val">84%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">Livewire &amp; REST API Integration <i className="val">80%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bx-server"></i> Livewire &amp; REST API</span>
+                    <span className="skill-val">80%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">Flutter <i className="val">72%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-flutter"></i> Flutter</span>
+                    <span className="skill-val">72%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-                <div className="progress">
-                  <span className="skill">Figma &amp; Adobe XD <i className="val">76%</i></span>
+                <div className="skill-item">
+                  <div className="skill-header">
+                    <span className="skill-name"><i className="bx bxl-figma"></i> Figma &amp; Adobe XD</span>
+                    <span className="skill-val">76%</span>
+                  </div>
                   <div className="progress-bar-wrap">
                     <div className="progress-bar" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
@@ -232,93 +278,76 @@ export default function Home() {
           <div className="container" data-aos="fade-up">
             <div className="section-title">
               <h2>Resume</h2>
-              <p>Profile, education, and recent experience based on my current resume.</p>
+              <p>Profile, education, and professional experience</p>
             </div>
             <div className="row">
               <div className="col-lg-6">
-                <h3 className="resume-title">Profile</h3>
+                <h3 className="resume-title"><i className="bx bx-user"></i> Profile</h3>
                 <div className="resume-item pb-0">
                   <h4>Rogasian Gelasi Haji</h4>
                   <p><em>Front-end and Back-end Web Developer</em></p>
-                  <p>Dynamic and creative frontend and backend developer with 3 years of experience delivering visually stunning and user-friendly digital experiences. Passionate about leveraging design principles and technology to develop innovative solutions that meet the needs of clients and end-users. Eager to contribute my skills and expertise to a collaborative team.</p>
+                  <p>Dynamic and creative frontend and backend developer with 3 years of experience delivering visually stunning and user-friendly digital experiences.</p>
                   <ul>
-                    <li>Tanzania, Mbeya</li>
-                    <li>https://mvungi-rogasian.vercel.app</li>
-                    <li>https://github.com/mvungi113</li>
-                    <li>+255697624409</li>
-                    <li>rogashianmvugi@gmail.com</li>
+                    <li><i className="bx bx-chevron-right"></i> Tanzania, Mbeya</li>
+                    <li><i className="bx bx-chevron-right"></i> <a href="https://mvungi-rogasian.vercel.app" target="_blank" rel="noopener">mvungi-rogasian.vercel.app</a></li>
+                    <li><i className="bx bx-chevron-right"></i> <a href="https://github.com/mvungi113" target="_blank" rel="noopener">github.com/mvungi113</a></li>
+                    <li><i className="bx bx-chevron-right"></i> +255697624409</li>
+                    <li><i className="bx bx-chevron-right"></i> rogashianmvugi@gmail.com</li>
                   </ul>
                 </div>
-                <h3 className="resume-title">Education</h3>
+                <h3 className="resume-title"><i className="bx bx-book"></i> Education</h3>
                 <div className="resume-item">
-                  <h4>Mbeya University of Science and Technology (MUST)</h4>
+                  <h4>Mbeya University of Science and Technology</h4>
                   <h5>2022 - 2025</h5>
                   <p><em>Bachelor of Computer Science (BCS)</em></p>
                 </div>
                 <div className="resume-item">
-                  <h4>Mbeya University of Science and Technology (MUST)</h4>
+                  <h4>Mbeya University of Science and Technology</h4>
                   <h5>2019 - 2022</h5>
-                  <p><em>Diploma in Information and Communication Technology (DICT)</em></p>
+                  <p><em>Diploma in Information and Communication Technology</em></p>
                 </div>
                 <div className="resume-item">
                   <h4>Nyerere Secondary School</h4>
                   <h5>2015 - 2018</h5>
-                  <p><em>Certificate of Secondary Education Examination (CSEE)</em></p>
-                </div>
-                <h3 className="resume-title">Languages</h3>
-                <div className="resume-item language-rating-item">
-                  <p className="language-rating-row">
-                    <span className="language-name">English</span>
-                    <span className="language-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-                  </p>
-                </div>
-                <div className="resume-item language-rating-item pb-0">
-                  <p className="language-rating-row">
-                    <span className="language-name">Swahili</span>
-                    <span className="language-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                  </p>
+                  <p><em>Certificate of Secondary Education Examination</em></p>
                 </div>
               </div>
               <div className="col-lg-6">
-                <h3 className="resume-title">Professional Experience</h3>
+                <h3 className="resume-title"><i className="bx bx-briefcase"></i> Experience</h3>
                 <div className="resume-item">
                   <h4>Web Developer (Freelance)</h4>
                   <h5>2025 - Present</h5>
                   <p><em>Mbeya</em></p>
                   <ul>
-                    <li>Developed and maintained web applications using Laravel, Next.js, React, PHP, JavaScript, MySQL, and PostgreSQL.</li>
-                    <li>Built dynamic platforms including blogs, management systems, and portfolio websites.</li>
-                    <li>Integrated REST APIs and databases including MySQL, PostgreSQL, and Supabase.</li>
-                    <li>Tested, debugged, and optimized applications for performance, usability, and security.</li>
+                    <li><i className="bx bx-chevron-right"></i> Developed web applications using Laravel, Next.js, React, PHP, JavaScript, MySQL, and PostgreSQL.</li>
+                    <li><i className="bx bx-chevron-right"></i> Built dynamic platforms including blogs, management systems, and portfolio websites.</li>
+                    <li><i className="bx bx-chevron-right"></i> Integrated REST APIs and databases including MySQL, PostgreSQL, and Supabase.</li>
                   </ul>
                 </div>
                 <div className="resume-item">
                   <h4>Full Stack Web Developer</h4>
                   <h5>12/2025 - 02/2026</h5>
-                  <p><em>Anaby Green Company Limited, Mbeya</em></p>
+                  <p><em>Anaby Green Company Limited</em></p>
                   <ul>
-                    <li>Developed the official company website using Laravel, MySQL, Tailwind CSS, and Livewire.</li>
-                    <li>Designed responsive interfaces and implemented backend content management features.</li>
-                    <li>Optimized the website for performance, reliability, and security.</li>
+                    <li><i className="bx bx-chevron-right"></i> Developed the official company website using Laravel, MySQL, Tailwind CSS, and Livewire.</li>
+                    <li><i className="bx bx-chevron-right"></i> Designed responsive interfaces and implemented backend content management features.</li>
                   </ul>
                 </div>
                 <div className="resume-item">
                   <h4>Full Stack Developer (Team Project)</h4>
                   <h5>07/2025 - 12/2025</h5>
-                  <p><em>Mbeya University of Science and Technology (MUST), Mbeya</em></p>
+                  <p><em>MUST, Mbeya</em></p>
                   <ul>
-                    <li>Contributed to Project Hub, a system for managing finalist student projects at MUST.</li>
-                    <li>Built responsive interfaces with Next.js and React and integrated Supabase as the backend database.</li>
-                    <li>Implemented project submission, supervision, evaluation, and tracking workflows using Git and GitHub for collaboration.</li>
+                    <li><i className="bx bx-chevron-right"></i> Contributed to Project Hub for managing finalist student projects at MUST.</li>
+                    <li><i className="bx bx-chevron-right"></i> Built responsive interfaces with Next.js and React, integrated Supabase.</li>
                   </ul>
                 </div>
                 <div className="resume-item">
                   <h4>Network Support Intern</h4>
                   <h5>07/2024 - 09/2024</h5>
-                  <p><em>Tanzania Telecommunication Corporation Limited (TTCL), Mbeya</em></p>
+                  <p><em>TTCL, Mbeya</em></p>
                   <ul>
-                    <li>Assisted with network device configuration, maintenance, and troubleshooting.</li>
-                    <li>Supported data management, system monitoring, and ICT infrastructure activities.</li>
+                    <li><i className="bx bx-chevron-right"></i> Assisted with network device configuration, maintenance, and troubleshooting.</li>
                   </ul>
                 </div>
               </div>
@@ -330,6 +359,7 @@ export default function Home() {
           <div className="container" data-aos="fade-up">
             <div className="section-title">
               <h2>Portfolio</h2>
+              <p>Recent projects I've worked on</p>
             </div>
             <div className="row">
               <div className="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -342,8 +372,8 @@ export default function Home() {
               </div>
             </div>
             <div id="portfolio-container" className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-              </div>
-              <script id="portfolio-data" type="application/json" dangerouslySetInnerHTML={{__html: JSON.stringify([
+            </div>
+            <script id="portfolio-data" type="application/json" dangerouslySetInnerHTML={{__html: JSON.stringify([
       {
         "title": "Ecommerce App",
         "category": "app",
@@ -424,78 +454,61 @@ export default function Home() {
           <div className="container" data-aos="fade-up">
             <div className="section-title">
               <h2>Services</h2>
+              <p>What I can do for your business</p>
             </div>
             <div className="row">
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                <div className="icon-box iconbox-blue">
-                  <div className="icon">
-                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke="none" strokeWidth="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
-                    </svg>
-                    <i className="bx bxl-dribbble"></i>
+              <div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div className="service-card">
+                  <div className="service-icon service-icon-blue">
+                    <i className="bx bx-mobile-alt"></i>
                   </div>
-                  <h4><a href="">Mobile App</a></h4>
-                  <p>Many people are currently using smart phones. It's your time to transfer your business online so that you can meet your customers very easily</p>
+                  <h4>Mobile App Development</h4>
+                  <p>Build cross-platform mobile applications with Flutter and modern UI/UX that meet your customers where they are.</p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-                <div className="icon-box iconbox-orange ">
-                  <div className="icon">
-                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke="none" strokeWidth="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
-                    </svg>
-                    <i className="bx bx-file"></i>
+              <div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div className="service-card">
+                  <div className="service-icon service-icon-green">
+                    <i className="bx bx-globe"></i>
                   </div>
-                  <h4><a href="">Website</a></h4>
-                  <p>Through the website you can increase the sales of your products by advertising them online anywhere in the word</p>
+                  <h4>Web Development</h4>
+                  <p>Create responsive, high-performance websites and web applications using Laravel, Next.js, and React.</p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-                <div className="icon-box iconbox-pink">
-                  <div className="icon">
-                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke="none" strokeWidth="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
-                    </svg>
-                    <i className="bx bx-tachometer"></i>
+              <div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div className="service-card">
+                  <div className="service-icon service-icon-purple">
+                    <i className="bx bx-server"></i>
                   </div>
-                  <h4><a href="">Busines Cards</a></h4>
-                  <p>Your business needs to have a business card that will facilitate communication between you and your customer</p>
+                  <h4>Backend &amp; API</h4>
+                  <p>Design and develop robust backend systems, REST APIs, and database architectures for scalable applications.</p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-                <div className="icon-box iconbox-yellow">
-                  <div className="icon">
-                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke="none" strokeWidth="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
-                    </svg>
-                    <i className="bx bx-layer"></i>
+              <div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div className="service-card">
+                  <div className="service-icon service-icon-orange">
+                    <i className="bx bx-palette"></i>
                   </div>
-                  <h4><a href="">Logo</a></h4>
-                  <p>The logo is what carries the reality  of your business. Let us create a good logo for your business.</p>
+                  <h4>UI/UX Design</h4>
+                  <p>Design clean, intuitive interfaces using Figma and Adobe XD that users love and businesses trust.</p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-                <div className="icon-box iconbox-red">
-                  <div className="icon">
-                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke="none" strokeWidth="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
-                    </svg>
-                    <i className="bx bx-slideshow"></i>
+              <div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div className="service-card">
+                  <div className="service-icon service-icon-red">
+                    <i className="bx bx-data"></i>
                   </div>
-                  <h4><a href="">Videos</a></h4>
-                  <p>We make short videosfor your business advertisements, we are ready to serve you.</p>
+                  <h4>Database Design</h4>
+                  <p>Architecture and optimization of MySQL, PostgreSQL, and Supabase databases for reliable data management.</p>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-                <div className="icon-box iconbox-teal">
-                  <div className="icon">
-                    <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke="none" strokeWidth="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
-                    </svg>
-                    <i className="bx bx-arch"></i>
+              <div className="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div className="service-card">
+                  <div className="service-icon service-icon-teal">
+                    <i className="bx bx-support"></i>
                   </div>
-                  <h4><a href="">Poster &amp; Banners</a></h4>
-                  <p>Posters and Banners are important things for promoting your business</p>
+                  <h4>Technical Support</h4>
+                  <p>Ongoing maintenance, debugging, and optimization to keep your applications running smoothly.</p>
                 </div>
               </div>
             </div>
@@ -505,17 +518,16 @@ export default function Home() {
         <footer id="footer">
           <div className="container">
             <h3>Rogasian Mvungi</h3>
-            <p>full-stack Developer</p>
+            <p>Full-Stack Developer</p>
             <div className="social-links">
-              <a href="https://github.com/mvungi113" className="twitter"><i className="bx bxl-github"></i></a>
-              <a href="https://x.com/rogasiani_" className="twitter"><i className="bx bxl-twitter"></i></a>
-              <a href="https://wa.me/255697624409" className="whatsapp"><i className="bx bxl-whatsapp"></i></a>
-              <a href="https://www.instagram.com/rogasiangelasi" className="instagram"><i className="bx bxl-instagram"></i></a>
-              <a href="https://www.facebook.com/rogasian.gelas" className="facebook"><i className="bx bxl-facebook"></i></a>
-              <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/mvungi113" target="_blank" rel="noopener"><i className="bx bxl-github"></i></a>
+              <a href="https://x.com/rogasiani_" target="_blank" rel="noopener"><i className="bx bxl-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" target="_blank" rel="noopener"><i className="bx bxl-linkedin"></i></a>
+              <a href="https://wa.me/255697624409" target="_blank" rel="noopener"><i className="bx bxl-whatsapp"></i></a>
+              <a href="https://www.instagram.com/rogasiangelasi" target="_blank" rel="noopener"><i className="bx bxl-instagram"></i></a>
+              <a href="https://www.facebook.com/rogasian.gelas" target="_blank" rel="noopener"><i className="bx bxl-facebook"></i></a>
             </div>
-            <div className="copyright">© Copyright <strong><span>Wekindos devs</span></strong>. All Rights Reserved</div>
-            <div className="credits"></div>
+            <div className="copyright">&copy; {new Date().getFullYear()} <strong>Rogasian Mvungi</strong>. All Rights Reserved</div>
           </div>
         </footer>
 
