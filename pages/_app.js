@@ -8,14 +8,6 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/kindo.jpg" />
         <link rel="apple-touch-icon" href="/images/kindo.jpg" />
-        <link rel="stylesheet" href="/css/css.css" />
-        <link rel="stylesheet" href="/css/aos.css" />
-        <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/css/bootstrap-icons.css" />
-        <link rel="stylesheet" href="/css/boxicons.min.css" />
-        <link rel="stylesheet" href="/css/glightbox.min.css" />
-        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/css/style.css" />
       </Head>
 
       <Script src="/js/purecounter.js" strategy="afterInteractive" />

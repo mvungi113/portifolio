@@ -20,17 +20,56 @@ export default function Home() {
 
       <section id="hero" className="d-flex flex-column justify-content-center">
         <div className="container" data-aos="zoom-in" data-aos-delay="100">
-          <h1>Rogasian Mvungi</h1>
-          <p>I'm <span className="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
-          <div className="social-links">
-            <a href="https://github.com/mvungi113" className="twitter"><i className="bx bxl-github"></i></a>
-            <a href="https://x.com/rogasiani_" className="twitter"><i className="bx bxl-twitter"></i></a>
-            <a href="https://www.instagram.com/rogasiangelasi" className="instagram"><i className="bx bxl-instagram"></i></a>
-            <a href="https://wa.me/255697624409" className="whatsapp"><i className="bx bxl-whatsapp"></i></a>
-            <a href="https://www.facebook.com/rogasian.gelas" className="facebook"><i className="bx bxl-facebook"></i></a>
-            <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" className="linkedin"><i className="bx bxl-linkedin"></i></a>
+          <div className="row align-items-center">
+            <div className="col-lg-7">
+              <p className="hero-greeting">Hello, I'm</p>
+              <h1>Rogasian Mvungi</h1>
+              <p className="hero-subtitle">A <span className="typed" data-typed-items="Designer, Developer, Freelancer"></span></p>
+              <p className="hero-desc">I build modern web and mobile applications with clean code and great user experiences.</p>
+              <div className="hero-cta">
+                <a href="#portfolio" className="btn btn-primary hero-btn">View My Work</a>
+                <a href="#footer" className="btn btn-outline-primary hero-btn">Get In Touch</a>
+              </div>
+              <div className="social-links hero-socials">
+                <a href="https://github.com/mvungi113" target="_blank" rel="noopener"><i className="bx bxl-github"></i></a>
+                <a href="https://x.com/rogasiani_" target="_blank" rel="noopener"><i className="bx bxl-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" target="_blank" rel="noopener"><i className="bx bxl-linkedin"></i></a>
+                <a href="https://wa.me/255697624409" target="_blank" rel="noopener"><i className="bx bxl-whatsapp"></i></a>
+                <a href="https://www.instagram.com/rogasiangelasi" target="_blank" rel="noopener"><i className="bx bxl-instagram"></i></a>
+                <a href="https://www.facebook.com/rogasian.gelas" target="_blank" rel="noopener"><i className="bx bxl-facebook"></i></a>
+              </div>
+            </div>
+            <div className="col-lg-5 d-none d-lg-block">
+              <div className="hero-code-animation">
+                <div className="code-window">
+                  <div className="code-header">
+                    <span className="dot dot-red"></span>
+                    <span className="dot dot-yellow"></span>
+                    <span className="dot dot-green"></span>
+                    <span className="code-filename">developer.js</span>
+                  </div>
+                  <div className="code-body">
+                    <div className="code-line"><span className="kw">const</span> <span className="var">developer</span> = {`{`}</div>
+                    <div className="code-line indent"><span className="prop">name</span>: <span className="str">"Rogasian"</span>,</div>
+                    <div className="code-line indent"><span className="prop">role</span>: <span className="str">"Full Stack Dev"</span>,</div>
+                    <div className="code-line indent"><span className="prop">skills</span>: [</div>
+                    <div className="code-line indent-2"><span className="str">"React"</span>, <span className="str">"Next.js"</span>,</div>
+                    <div className="code-line indent-2"><span className="str">"Laravel"</span>, <span className="str">"Flutter"</span></div>
+                    <div className="code-line indent">],</div>
+                    <div className="code-line indent"><span className="prop">passion</span>: <span className="str">"Building products"</span></div>
+                    <div className="code-line">{`}`};</div>
+                    <div className="code-line">&nbsp;</div>
+                    <div className="code-line"><span className="kw">return</span> <span className="fn">createApp</span>(<span className="var">developer</span>);</div>
+                    <div className="code-cursor"></div>
+                  </div>
+                </div>
+                <div className="floating-icon float-icon-1"><i className="bx bxl-react"></i></div>
+                <div className="floating-icon float-icon-2"><i className="bx bxl-nodejs"></i></div>
+                <div className="floating-icon float-icon-3"><i className="bx bxl-php"></i></div>
+                <div className="floating-icon float-icon-4"><i className="bx bxl-firebase"></i></div>
+              </div>
+            </div>
           </div>
-          <br />
         </div>
       </section>
 
