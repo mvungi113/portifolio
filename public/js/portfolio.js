@@ -23,6 +23,7 @@
 
     const imageUrl = normalizeImage(item.image);
 
+    const sourceUrl = item.source || '';
     col.innerHTML = `
       <div class="portfolio-wrap">
         <a href="${imageUrl}" class="portfolio-lightbox" data-gallery="portfolio">
@@ -33,6 +34,7 @@
           <p>${escapeHtml(item.type || '')}</p>
           <div class="portfolio-actions">
             <button type="button" class="btn btn-sm btn-outline-primary js-portfolio-details" data-index="${idx}">Details</button>
+            ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener" class="btn btn-sm btn-primary"><i class="bx bx-link-external"></i> Visit</a>` : ''}
           </div>
         </div>
       </div>`;
@@ -85,18 +87,43 @@
     const titleEl = modalEl.querySelector('.modal-title');
     const bodyEl = modalEl.querySelector('.modal-body');
     titleEl.textContent = item.title || '';
+
+    const imageUrl = normalizeImage(item.image);
+    const categoryLabel = (item.category || '').charAt(0).toUpperCase() + (item.category || '').slice(1);
+    const sourceUrl = item.source || '';
+
     bodyEl.innerHTML = `
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <img src="${normalizeImage(item.image)}" alt="${escapeHtml(item.title)}" class="img-fluid" style="width:100%;height:auto;object-fit:contain;max-height:60vh;">
+      <div class="portfolio-modal-content">
+        <div class="portfolio-modal-image">
+          <img src="${imageUrl}" alt="${escapeHtml(item.title)}" class="img-fluid">
         </div>
-        <div class="col-md-6">
-          <h5>${escapeHtml(item.title)}</h5>
-          <p>${escapeHtml(item.description || '')}</p>
-          <ul class="list-unstyled">
-            <li><strong>Category:</strong> ${escapeHtml(item.category || '')}</li>
-            <li><strong>Type:</strong> ${escapeHtml(item.type || '')}</li>
-          </ul>
+        <div class="portfolio-modal-details">
+          <div class="portfolio-modal-tags">
+            <span class="portfolio-tag tag-category">${escapeHtml(categoryLabel)}</span>
+            <span class="portfolio-tag tag-type">${escapeHtml(item.type || '')}</span>
+          </div>
+          <h3>${escapeHtml(item.title)}</h3>
+          <p class="portfolio-modal-desc">${escapeHtml(item.description || '')}</p>
+          <div class="portfolio-modal-meta">
+            <div class="meta-item">
+              <i class="bx bx-category"></i>
+              <div>
+                <span class="meta-label">Category</span>
+                <span class="meta-value">${escapeHtml(categoryLabel)}</span>
+              </div>
+            </div>
+            <div class="meta-item">
+              <i class="bx bx-file"></i>
+              <div>
+                <span class="meta-label">Type</span>
+                <span class="meta-value">${escapeHtml(item.type || '')}</span>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-modal-actions">
+            ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener" class="btn btn-primary"><i class="bx bx-link-external"></i> View Project</a>` : ''}
+            <a href="${imageUrl}" target="_blank" rel="noopener" class="btn btn-outline-primary"><i class="bx bx-image"></i> View Image</a>
+          </div>
         </div>
       </div>`;
 

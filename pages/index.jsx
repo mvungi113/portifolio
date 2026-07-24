@@ -366,7 +366,8 @@ export default function Home() {
                 <ul id="portfolio-flters">
                   <li data-filter="*" className="filter-active">All</li>
                   <li data-filter=".filter-app">App</li>
-                  <li data-filter=".filter-card">Design</li>
+                  <li data-filter=".filter-laravel">Laravel</li>
+                  <li data-filter=".filter-php">PHP</li>
                   <li data-filter=".filter-web">Web</li>
                 </ul>
               </div>
@@ -380,31 +381,31 @@ export default function Home() {
         "image": "images/refference/ecommerce app.png",
         "source": "https://github.com/mvungi113/ecommerce",
         "type": "Mobile Application",
-        "description": "A modern e-commerce mobile application built with Flutter, featuring a clean UI, smooth animations, and comprehensive shopping features."
+        "description": "A fully-featured e-commerce mobile application built with Flutter, featuring a modern UI with smooth animations, Provider state management, product browsing with category filtering, shopping cart, multi-step checkout with payment gateway integration, user profiles, order history, and real-time search with trending suggestions."
       },
       {
         "title": "Anaby Green",
         "category": "web",
         "image": "images/refference/anabygreen.png",
         "source": "https://anabygreen.co.tz/",
-        "type": "Web",
-        "description": "Premium organic fertilizers and expert agricultural solutions to grow healthier crops, protect the environment, and empower Tanzanian farmers."
+        "type": "Business Website",
+        "description": "A comprehensive corporate website for Anaby Green Company Limited, a leading organic agriculture enterprise in Tanzania. Features a product catalog for organic fertilizers and pesticides, educational articles on sustainable farming, project showcase with field training programs, team profiles, customer testimonials, newsletter subscription, and a responsive design optimized for mobile-first access by farmers across rural Tanzania."
       },
       {
         "title": "Blog Hub",
         "category": "web",
         "image": "images/refference/bloghub.png",
         "source": "https://charming-blog.vercel.app",
-        "type": "Website",
-        "description": "A simple yet elegant blog platform for sharing knowledge and experiences."
+        "type": "Web Application",
+        "description": "A modern, minimalist blog platform built with Next.js, designed for content creators to publish and share articles. Features a clean reading experience with markdown support, responsive layout, category-based article organization, and optimized performance with server-side rendering for fast page loads."
       },
       {
         "title": "Smart Warehouse Management System",
         "category": "web",
         "image": "images/refference/inventory.png",
         "source": "https://tanzania-stock-flow.vercel.app/",
-        "type": "Website",
-        "description": "A comprehensive warehouse management system for tracking inventory and optimizing operations."
+        "type": "Web Application",
+        "description": "A comprehensive warehouse inventory management system (TWIMS) built for Tanzania's stock flow operations. Features real-time inventory tracking, stock level alerts, goods receiving and dispatch workflows, warehouse zone management, stock transfer between locations, and detailed reporting dashboards to optimize supply chain operations."
       },
       {
         "title": "Inventory Mobile App",
@@ -412,39 +413,39 @@ export default function Home() {
         "image": "images/refference/noimg.png",
         "source": "https://github.com/mvungi113/inventory",
         "type": "Mobile Application",
-        "description": "Simple Mobile App for inventory management, allowing users to track and manage their stock on the go."
+        "description": "A cross-platform mobile application for on-the-go inventory management, allowing users to track stock levels, record incoming and outgoing items, generate barcode scans, and receive low-stock alerts — designed for warehouse staff and small business owners managing physical inventory in real time."
       },
       {
         "title": "Clearance Management System",
-        "category": "web",
+        "category": "laravel",
         "image": "images/refference/noimg.png",
         "source": "https://github.com/mvungi113/clearance-MS",
-        "type": "Website",
-        "description": "A system for managing clearance processes in educational institutions."
+        "type": "Web Application",
+        "description": "A Laravel-based student clearance management system for educational institutions, automating the entire clearance workflow. Students submit clearance requests online, which route through multiple approval departments (library, finance, academics), with real-time status tracking, automated email notifications, and an admin dashboard for managing clearance cycles and generating reports."
       },
       {
         "title": "Off-Campus Management System",
-        "category": "web",
+        "category": "php",
         "image": "images/refference/noimg.png",
         "source": "https://github.com/mvungi113/off-campus",
-        "type": "Website",
-        "description": "A system for managing off-campus processes in educational institutions."
+        "type": "Web Application",
+        "description": "A PHP-based off-campus housing management system for universities, enabling students to browse available rooms, submit housing applications, and track their approval status. Includes landlord listing management, room availability tracking, password recovery, and a database-driven backend for handling student accommodation records."
       },
       {
         "title": "Zoo Surveillance Management System",
-        "category": "web",
+        "category": "laravel",
         "image": "images/refference/noimg.png",
         "source": "https://github.com/mvungi113/zoo-mis",
-        "type": "Website",
-        "description": "A system for managing zoo surveillance operations and animal tracking."
+        "type": "Web Application",
+        "description": "A Laravel-based zoo management information system integrating surveillance and animal tracking. Features real-time camera feed monitoring, animal health and movement logging, enclosure management, incident reporting, visitor safety alerts, and a Tailwind CSS-powered dashboard for zoo administrators to oversee daily operations and maintain comprehensive wildlife records."
       },
       {
         "title": "Manage Product Expiration System",
-        "category": "web",
+        "category": "php",
         "image": "images/refference/noimg.png",
         "source": "https://github.com/mvungi113/manage_product_exp",
-        "type": "Website",
-        "description": "A system for managing product expiration dates and inventory in retail environments."
+        "type": "Web Application",
+        "description": "A PHP-based retail inventory system focused on product expiration tracking. Features QR code generation for product labeling, expiration date monitoring with automated alerts, stock rotation management (FIFO), product categorization, batch processing, and a reporting module to help retailers reduce waste and ensure only fresh products reach customers."
       }
     ])}} />
           </div>
