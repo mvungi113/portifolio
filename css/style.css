@@ -1390,8 +1390,10 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Responsive
+# Responsive - All Devices
 --------------------------------------------------------------*/
+
+/* Large tablets / small desktops */
 @media (max-width: 1199px) {
   #hero h1 {
     font-size: 44px;
@@ -1400,20 +1402,40 @@ section {
     font-size: 12px;
     min-height: 200px;
   }
+  .floating-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
 }
 
+/* Tablets */
 @media (max-width: 991px) {
   #hero {
     text-align: center;
     padding-top: 80px;
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+  #hero .hero-greeting {
+    font-size: 16px;
+  }
+  #hero h1 {
+    font-size: 38px;
+  }
+  #hero .hero-subtitle {
+    font-size: 18px;
   }
   #hero .hero-desc {
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   #hero .hero-cta {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 8px;
   }
   #hero .hero-socials {
     justify-content: center;
@@ -1421,7 +1443,7 @@ section {
 
   .about-profile-card {
     max-width: 350px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
   }
   .about-content {
     padding-left: 0;
@@ -1432,11 +1454,33 @@ section {
     margin-top: 30px;
   }
 
+  .portfolio #portfolio-flters {
+    flex-wrap: wrap;
+  }
+
+  #footer .row {
+    text-align: center;
+  }
+  #footer .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  #footer .footer-links,
+  #footer .footer-contact {
+    text-align: center;
+  }
+  #footer .footer-contact li {
+    justify-content: center;
+  }
+  #footer .footer-socials {
+    justify-content: center;
+  }
   .footer-bottom {
     text-align: center;
   }
 }
 
+/* Small tablets */
 @media (max-width: 767px) {
   section {
     padding: 50px 0;
@@ -1444,18 +1488,44 @@ section {
   .section-title h2 {
     font-size: 26px;
   }
+  .section-title p {
+    font-size: 14px;
+  }
 
+  /* Hero */
+  #hero {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
   #hero h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
   #hero .hero-subtitle {
     font-size: 16px;
   }
-  #hero .hero-btn {
-    padding: 10px 24px;
+  #hero .hero-desc {
     font-size: 14px;
   }
+  #hero .hero-btn {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
 
+  /* About */
+  .about-img {
+    height: 220px;
+  }
+  .about-content h3 {
+    font-size: 20px;
+  }
+  .about-highlight {
+    font-size: 14px;
+  }
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  /* Facts */
   .fact-box {
     padding: 25px 15px;
     margin-bottom: 15px;
@@ -1463,21 +1533,52 @@ section {
   .fact-number {
     font-size: 28px;
   }
-
-  .about-highlights {
-    grid-template-columns: 1fr;
+  .fact-icon {
+    width: 50px;
+    height: 50px;
   }
 
+  /* Skills */
   .skill-name {
     font-size: 13px;
   }
+  .skill-val {
+    font-size: 13px;
+  }
 
+  /* Resume */
   .resume .resume-item h4 {
     font-size: 15px;
   }
+  .resume .resume-item h5 {
+    font-size: 12px;
+    padding: 3px 12px;
+  }
+  .resume .resume-item ul li {
+    font-size: 13px;
+  }
 
+  /* Portfolio */
+  .portfolio #portfolio-flters {
+    padding: 4px 12px;
+  }
+  .portfolio #portfolio-flters li {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  .portfolio .portfolio-wrap img {
+    height: 180px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 15px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info p {
+    font-size: 12px;
+  }
+
+  /* Services */
   .service-card {
-    padding: 25px 20px;
+    padding: 25px 18px;
     margin-bottom: 16px;
   }
   .service-icon {
@@ -1488,46 +1589,141 @@ section {
   .service-card h4 {
     font-size: 16px;
   }
-
-  .portfolio #portfolio-flters li {
-    padding: 8px 14px;
-    font-size: 12px;
+  .service-card p {
+    font-size: 13px;
   }
 
-  .footer-brand,
-  .footer-desc,
-  .footer-socials {
-    text-align: center !important;
-    justify-content: center !important;
+  /* Footer */
+  #footer {
+    padding: 40px 0 0;
   }
-  .footer-title::after {
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+  #footer .footer-brand h3 {
+    font-size: 22px;
   }
-  .footer-links,
-  .footer-contact {
-    text-align: center !important;
+  #footer .footer-desc {
+    font-size: 13px;
   }
-  .footer-contact li {
-    justify-content: center !important;
+  #footer .footer-title {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  #footer .footer-links li {
+    margin-bottom: 8px;
+  }
+  #footer .footer-contact li {
+    font-size: 13px;
+    margin-bottom: 10px;
   }
 }
 
-@media (max-width: 480px) {
+/* Phones */
+@media (max-width: 575px) {
+  section {
+    padding: 40px 0;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   #hero h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
   #hero .hero-subtitle {
+    font-size: 15px;
+  }
+  #hero .hero-greeting {
     font-size: 14px;
+  }
+  #hero .hero-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  .about-content h3 {
+    font-size: 18px;
+  }
+
+  .fact-box {
+    padding: 20px 12px;
   }
   .fact-number {
     font-size: 24px;
   }
   .fact-icon {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
   }
   .fact-icon i {
+    font-size: 18px;
+  }
+
+  .skill-item {
+    margin-bottom: 14px;
+  }
+
+  .resume .resume-item {
+    padding-left: 16px;
+  }
+
+  .portfolio .portfolio-wrap img {
+    height: 160px;
+  }
+
+  .service-card {
+    padding: 20px 15px;
+  }
+
+  #footer .footer-links,
+  #footer .footer-contact {
+    padding-left: 0;
+  }
+  #footer .footer-contact li {
+    justify-content: center;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 24px;
+  }
+  #hero .hero-subtitle {
+    font-size: 14px;
+  }
+  #hero .hero-desc {
+    font-size: 13px;
+  }
+
+  .section-title h2 {
+    font-size: 22px;
+  }
+
+  .about-profile-info {
+    padding: 16px;
+  }
+  .about-profile-info h3 {
+    font-size: 18px;
+  }
+  .about-contact-grid div {
+    font-size: 13px;
+  }
+
+  .fact-number {
+    font-size: 22px;
+  }
+
+  .portfolio #portfolio-flters li {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+  .portfolio .portfolio-wrap img {
+    height: 140px;
+  }
+
+  #footer .footer-brand h3 {
     font-size: 20px;
   }
 }
