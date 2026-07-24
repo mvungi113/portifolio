@@ -185,7 +185,7 @@
       element: skilsContent,
       offset: '80%',
       handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
+        let progress = select('.progress-bar-wrap .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
         });
@@ -278,6 +278,44 @@
       once: true,
       mirror: false
     })
+  });
+
+  /**
+   * Counter animation for facts section
+   */
+  runOnLoad(() => {
+    const counters = document.querySelectorAll('.fact-number[data-target]');
+    if (!counters.length) return;
+
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 2000;
+      const step = Math.max(1, Math.ceil(target / (duration / 16)));
+      let current = 0;
+
+      const update = () => {
+        current += step;
+        if (current >= target) {
+          el.textContent = target + suffix;
+          return;
+        }
+        el.textContent = current + suffix;
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => observer.observe(c));
   });
 
 })()

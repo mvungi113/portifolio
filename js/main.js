@@ -41,6 +41,14 @@
   }
 
   /**
+   * Run a function on window load, or immediately if load already happened
+   */
+  const runOnLoad = (fn) => {
+    if (document.readyState === 'complete') fn();
+    else window.addEventListener('load', fn);
+  }
+
+  /**
    * Navbar links active state on scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
@@ -57,7 +65,7 @@
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive)
+  runOnLoad(navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
   /**
@@ -83,7 +91,7 @@
         backtotop.classList.remove('active')
       }
     }
-    window.addEventListener('load', toggleBacktotop)
+    runOnLoad(toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
 
@@ -117,7 +125,7 @@
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  window.addEventListener('load', () => {
+  runOnLoad(() => {
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash)
@@ -127,12 +135,29 @@
 
   /**
    * Preloader
+   * Ensure preloader is removed even if scripts run after the window 'load' event
    */
   let preloader = select('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove()
-    });
+    const removePreloader = () => {
+      try {
+        if (preloader && preloader.parentNode) preloader.parentNode.removeChild(preloader);
+        // Ensure body is visible for migrated templates
+        document.body.style.display = 'block';
+        document.body.style.visibility = 'visible';
+        document.body.style.opacity = '1';
+        // Remove any Next.js FOUC style nodes if present
+        var hides = document.querySelectorAll('[data-next-hide-fouc]');
+        hides.forEach(function(h){ if (h && h.parentNode) h.parentNode.removeChild(h); });
+      } catch (e) {
+        // ignore
+      }
+    };
+    if (document.readyState === 'complete') {
+      removePreloader();
+    } else {
+      runOnLoad(removePreloader);
+    }
   }
 
   /**
@@ -160,7 +185,7 @@
       element: skilsContent,
       offset: '80%',
       handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
+        let progress = select('.progress-bar-wrap .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
         });
@@ -191,49 +216,106 @@
 
   /**
    * Portfolio details slider
+   * Initialize when Swiper is available (vendor script may load later)
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
+  runOnLoad(() => {
+    const initPortfolioDetailsSwiper = () => {
+      if (typeof Swiper === 'function') {
+        new Swiper('.portfolio-details-slider', {
+          speed: 400,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+          }
+        });
+      } else {
+        setTimeout(initPortfolioDetailsSwiper, 200);
+      }
+    };
+    initPortfolioDetailsSwiper();
   });
 
   /**
    * Testimonials slider
    */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
+  runOnLoad(() => {
+    const initTestimonialsSwiper = () => {
+      if (typeof Swiper === 'function') {
+        new Swiper('.testimonials-slider', {
+          speed: 600,
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+          },
+          slidesPerView: 'auto',
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+          }
+        });
+      } else {
+        setTimeout(initTestimonialsSwiper, 200);
+      }
+    };
+    initTestimonialsSwiper();
   });
 
   /**
    * Animation on scroll
    */
-  window.addEventListener('load', () => {
+  runOnLoad(() => {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',
       once: true,
       mirror: false
     })
+  });
+
+  /**
+   * Counter animation for facts section
+   */
+  runOnLoad(() => {
+    const counters = document.querySelectorAll('.fact-number[data-target]');
+    if (!counters.length) return;
+
+    const animateCounter = (el) => {
+      const target = parseInt(el.getAttribute('data-target'), 10);
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 2000;
+      const step = Math.max(1, Math.ceil(target / (duration / 16)));
+      let current = 0;
+
+      const update = () => {
+        current += step;
+        if (current >= target) {
+          el.textContent = target + suffix;
+          return;
+        }
+        el.textContent = current + suffix;
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => observer.observe(c));
   });
 
 })()

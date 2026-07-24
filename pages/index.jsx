@@ -140,28 +140,28 @@ export default function Home() {
               <div className="col-lg-3 col-md-6">
                 <div className="fact-box">
                   <div className="fact-icon"><i className="bi bi-emoji-smile"></i></div>
-                  <span className="fact-number">4+</span>
+                  <span className="fact-number" data-target="4" data-suffix="+">0</span>
                   <p>Happy Clients</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="fact-box">
                   <div className="fact-icon"><i className="bi bi-journal-richtext"></i></div>
-                  <span className="fact-number">9+</span>
+                  <span className="fact-number" data-target="9" data-suffix="+">0</span>
                   <p>Projects</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="fact-box">
                   <div className="fact-icon"><i className="bi bi-headset"></i></div>
-                  <span className="fact-number">1463+</span>
+                  <span className="fact-number" data-target="1463" data-suffix="+">0</span>
                   <p>Hours Of Support</p>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
                 <div className="fact-box">
                   <div className="fact-icon"><i className="bi bi-award"></i></div>
-                  <span className="fact-number">3+</span>
+                  <span className="fact-number" data-target="3" data-suffix="+">0</span>
                   <p>Years Experience</p>
                 </div>
               </div>
@@ -517,17 +517,55 @@ export default function Home() {
 
         <footer id="footer">
           <div className="container">
-            <h3>Rogasian Mvungi</h3>
-            <p>Full-Stack Developer</p>
-            <div className="social-links">
-              <a href="https://github.com/mvungi113" target="_blank" rel="noopener"><i className="bx bxl-github"></i></a>
-              <a href="https://x.com/rogasiani_" target="_blank" rel="noopener"><i className="bx bxl-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" target="_blank" rel="noopener"><i className="bx bxl-linkedin"></i></a>
-              <a href="https://wa.me/255697624409" target="_blank" rel="noopener"><i className="bx bxl-whatsapp"></i></a>
-              <a href="https://www.instagram.com/rogasiangelasi" target="_blank" rel="noopener"><i className="bx bxl-instagram"></i></a>
-              <a href="https://www.facebook.com/rogasian.gelas" target="_blank" rel="noopener"><i className="bx bxl-facebook"></i></a>
+            <div className="row">
+              <div className="col-lg-4">
+                <div className="footer-brand">
+                  <h3>Rogasian Mvungi</h3>
+                  <p>Full-Stack Developer</p>
+                </div>
+                <p className="footer-desc">Building modern web and mobile applications with clean code and great user experiences. Based in Mbeya, Tanzania.</p>
+                <div className="social-links footer-socials">
+                  <a href="https://github.com/mvungi113" target="_blank" rel="noopener"><i className="bx bxl-github"></i></a>
+                  <a href="https://x.com/rogasiani_" target="_blank" rel="noopener"><i className="bx bxl-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/rogasian-haji-2049431b2/" target="_blank" rel="noopener"><i className="bx bxl-linkedin"></i></a>
+                  <a href="https://wa.me/255697624409" target="_blank" rel="noopener"><i className="bx bxl-whatsapp"></i></a>
+                  <a href="https://www.instagram.com/rogasiangelasi" target="_blank" rel="noopener"><i className="bx bxl-instagram"></i></a>
+                  <a href="https://www.facebook.com/rogasian.gelas" target="_blank" rel="noopener"><i className="bx bxl-facebook"></i></a>
+                </div>
+              </div>
+              <div className="col-lg-2 col-md-4">
+                <h4 className="footer-title">Quick Links</h4>
+                <ul className="footer-links">
+                  <li><a href="#hero">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#resume">Resume</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#services">Services</a></li>
+                </ul>
+              </div>
+              <div className="col-lg-3 col-md-4">
+                <h4 className="footer-title">Services</h4>
+                <ul className="footer-links">
+                  <li><a href="#services">Web Development</a></li>
+                  <li><a href="#services">Mobile Apps</a></li>
+                  <li><a href="#services">UI/UX Design</a></li>
+                  <li><a href="#services">Backend &amp; API</a></li>
+                  <li><a href="#services">Database Design</a></li>
+                </ul>
+              </div>
+              <div className="col-lg-3 col-md-4">
+                <h4 className="footer-title">Contact</h4>
+                <ul className="footer-contact">
+                  <li><i className="bx bx-phone"></i> +255697624409</li>
+                  <li><i className="bx bx-envelope"></i> rogashianmvugi@gmail.com</li>
+                  <li><i className="bx bx-map"></i> Mbeya, Tanzania</li>
+                  <li><i className="bx bx-check-circle"></i> Available for Freelance</li>
+                </ul>
+              </div>
             </div>
-            <div className="copyright">&copy; {new Date().getFullYear()} <strong>Rogasian Mvungi</strong>. All Rights Reserved</div>
+            <div className="footer-bottom">
+              <p>&copy; {new Date().getFullYear()} <strong>Rogasian Mvungi</strong>. All Rights Reserved</p>
+            </div>
           </div>
         </footer>
 
