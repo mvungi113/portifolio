@@ -1829,6 +1829,9 @@ section {
   .portfolio .portfolio-wrap img {
     height: 180px;
   }
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 1;
+  }
   .portfolio .portfolio-wrap .portfolio-info h4 {
     font-size: 15px;
   }
