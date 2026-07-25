@@ -25,16 +25,16 @@
 
     const sourceUrl = item.source || '';
     col.innerHTML = `
-      <div class="portfolio-wrap">
-        <a href="${imageUrl}" class="portfolio-lightbox" data-gallery="portfolio">
+      <div class="portfolio-wrap" data-index="${idx}">
+        <div class="portfolio-thumb">
           <img src="${imageUrl}" loading="lazy" class="img-fluid" style="width:100%;height:220px;object-fit:cover;" alt="${escapeHtml(item.title)}">
-        </a>
+        </div>
         <div class="portfolio-info">
           <h4>${escapeHtml(item.title)}</h4>
           <p>${escapeHtml(item.type || '')}</p>
           <div class="portfolio-actions">
             <button type="button" class="btn btn-sm btn-outline-primary js-portfolio-details" data-index="${idx}">Details</button>
-            ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener" class="btn btn-sm btn-primary"><i class="bx bx-link-external"></i> Visit</a>` : ''}
+            ${sourceUrl ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener" class="btn btn-sm btn-primary" onclick="event.stopPropagation()"><i class="bx bx-link-external"></i> Visit</a>` : ''}
           </div>
         </div>
       </div>`;
@@ -60,11 +60,6 @@
     const fragment = document.createDocumentFragment();
     itemsCache.forEach((it, i) => fragment.appendChild(createCard(it, i)));
     container.appendChild(fragment);
-
-    // initialize lightbox
-    if (typeof GLightbox === 'function') {
-      try { window._portfolioGL = GLightbox({ selector: '.portfolio-lightbox' }); } catch (e) { /* ignore */ }
-    }
 
     // initialize isotope if available
     if (typeof Isotope === 'function') {
@@ -162,11 +157,14 @@
     });
   };
 
-  // Event delegation for details button
+  // Event delegation: clicking anywhere on the card opens details modal
   container.addEventListener('click', function (e) {
-    const btn = e.target.closest('.js-portfolio-details');
-    if (!btn) return;
-    const idx = parseInt(btn.getAttribute('data-index'), 10);
+    // Ignore clicks on external links (Visit button)
+    if (e.target.closest('a[href]') && !e.target.closest('.js-portfolio-details')) return;
+
+    const wrap = e.target.closest('.portfolio-wrap');
+    if (!wrap) return;
+    const idx = parseInt(wrap.getAttribute('data-index'), 10);
     if (isNaN(idx) || !itemsCache[idx]) return;
     openModal(itemsCache[idx]);
   });

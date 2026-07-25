@@ -941,11 +941,6 @@ section {
   height: 220px;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease;
-}
-
-.portfolio .portfolio-wrap:hover img {
-  transform: scale(1.05);
 }
 
 .portfolio .portfolio-wrap .portfolio-info {
@@ -1001,6 +996,19 @@ section {
 
 .portfolio .portfolio-wrap {
   cursor: pointer;
+}
+
+.portfolio .portfolio-wrap .portfolio-thumb {
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-thumb img {
+  transition: transform 0.4s ease;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-thumb img {
+  transform: scale(1.05);
 }
 
 /*--------------------------------------------------------------
@@ -1828,9 +1836,6 @@ section {
   }
   .portfolio .portfolio-wrap img {
     height: 180px;
-  }
-  .portfolio .portfolio-wrap .portfolio-info {
-    opacity: 1;
   }
   .portfolio .portfolio-wrap .portfolio-info h4 {
     font-size: 15px;
