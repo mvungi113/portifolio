@@ -315,13 +315,17 @@ export default function Home() {
               <div className="col-lg-6">
                 <h3 className="resume-title"><i className="bx bx-briefcase"></i> Experience</h3>
                 <div className="resume-item">
-                  <h4>Web Developer (Freelance)</h4>
-                  <h5>2025 - Present</h5>
-                  <p><em>Mbeya</em></p>
+                  <h4>Product Technician</h4>
+                  <h5>2026 - Present</h5>
+                  <p><em>M-GAS, Dar Es Salaam</em></p>
                   <ul>
-                    <li><i className="bx bx-chevron-right"></i> Developed web applications using Laravel, Next.js, React, PHP, JavaScript, MySQL, and PostgreSQL.</li>
-                    <li><i className="bx bx-chevron-right"></i> Built dynamic platforms including blogs, management systems, and portfolio websites.</li>
-                    <li><i className="bx bx-chevron-right"></i> Integrated REST APIs and databases including MySQL, PostgreSQL, and Supabase.</li>
+                    <li><i className="bx bx-chevron-right"></i> Diagnose and troubleshoot faults on smart gas meters to identify hardware and software-related issues.</li>
+                    <li><i className="bx bx-chevron-right"></i> Configure and calibrate gas meters to ensure accurate operation and compliance with technical standards.</li>
+                    <li><i className="bx bx-chevron-right"></i> Install and update meter firmware, verifying successful deployment and device functionality.</li>
+                    <li><i className="bx bx-chevron-right"></i> Perform preventive and corrective maintenance on field devices to improve reliability and reduce downtime.</li>
+                    <li><i className="bx bx-chevron-right"></i> Test and validate meter performance after repairs and firmware upgrades.</li>
+                    <li><i className="bx bx-chevron-right"></i> Record diagnostic results, maintenance activities, and technical reports for service tracking and issue resolution.</li>
+                    <li><i className="bx bx-chevron-right"></i> Provide field technical support during meter installation, replacement, and commissioning.</li>
                   </ul>
                 </div>
                 <div className="resume-item">
@@ -345,9 +349,24 @@ export default function Home() {
                 <div className="resume-item">
                   <h4>Network Support Intern</h4>
                   <h5>07/2024 - 09/2024</h5>
-                  <p><em>TTCL, Mbeya</em></p>
+                  <p><em>Tanzania Telecommunication Corporation Limited (TTCL), Mbeya, Tanzania</em></p>
                   <ul>
-                    <li><i className="bx bx-chevron-right"></i> Assisted with network device configuration, maintenance, and troubleshooting.</li>
+                    <li><i className="bx bx-chevron-right"></i> Assisted in configuring and maintaining network devices and communication systems.</li>
+                    <li><i className="bx bx-chevron-right"></i> Supported system monitoring and data management operations.</li>
+                    <li><i className="bx bx-chevron-right"></i> Participated in installation, maintenance, and troubleshooting of network infrastructure.</li>
+                    <li><i className="bx bx-chevron-right"></i> Gained hands-on experience in ICT infrastructure and technical support.</li>
+                  </ul>
+                </div>
+                <div className="resume-item">
+                  <h4>GIS Intern</h4>
+                  <h5>07/2023 - 09/2023</h5>
+                  <p><em>Mbeya Urban Water Supply and Sanitation Authority (MBEWASA), Mbeya, Tanzania</em></p>
+                  <ul>
+                    <li><i className="bx bx-chevron-right"></i> Collected, analyzed, and maintained GIS data for water supply infrastructure.</li>
+                    <li><i className="bx bx-chevron-right"></i> Created and updated digital maps for monitoring water distribution assets.</li>
+                    <li><i className="bx bx-chevron-right"></i> Supported infrastructure planning through spatial data analysis and reporting.</li>
+                    <li><i className="bx bx-chevron-right"></i> Produced maps, reports, and visualizations for decision-making.</li>
+                    <li><i className="bx bx-chevron-right"></i> Ensured accuracy and proper management of geospatial datasets.</li>
                   </ul>
                 </div>
               </div>
