@@ -70,5 +70,45 @@
     "source": "https://github.com/mvungi113/manage_product_exp",
     "type": "Web Application",
     "description": "A PHP-based retail inventory system focused on product expiration tracking. Features QR code generation for product labeling, expiration date monitoring with automated alerts, stock rotation management (FIFO), product categorization, batch processing, and a reporting module to help retailers reduce waste and ensure only fresh products reach customers."
+  },
+  {
+    "title": "Online Voting Portal",
+    "category": "laravel",
+    "image": "images/refference/noimg.png",
+    "source": "https://voteportal.onrender.com/",
+    "type": "Full-Stack Web Application",
+    "description": "A secure Laravel-based online voting platform for managing voters, candidates, elections, voting workflows, and election results. Features voter registration and authentication, candidate and election management, vote recording, administrative monitoring, a responsive Tailwind CSS interface, and a PostgreSQL-backed relational architecture."
+  },
+  {
+    "title": "Inventory Management System (IMS)",
+    "category": "laravel",
+    "image": "images/refference/noimg.png",
+    "source": "https://ims-rho-rosy.vercel.app/",
+    "type": "Full-Stack Business Management System",
+    "description": "A comprehensive inventory and business management system built with a Laravel REST API and Next.js client. Features stock management, sales and purchases, branch-to-branch stock transfers, sales and purchase returns, inventory calculations, transaction tracking, and operational dashboards using PostgreSQL hosted on Neon."
+  },
+  {
+    "title": "Anaby Green Company Website",
+    "category": "laravel",
+    "image": "images/refference/noimg.png",
+    "source": "https://anabygreen.co.tz/",
+    "type": "Corporate Website",
+    "description": "A responsive Laravel corporate website for Anaby Green Company, presenting its agricultural products, services, and company information. Features MySQL-backed content, company and product sections, responsive Tailwind CSS layouts, a branded modern interface, and production deployment optimized for desktop and mobile devices."
+  },
+  {
+    "title": "OneSMS Student Management System",
+    "category": "laravel",
+    "image": "images/refference/noimg.png",
+    "source": "https://onesmsui.vercel.app/",
+    "type": "Full-Stack Student Management System",
+    "description": "A student management platform built with a Laravel REST API and Next.js client for managing student information and school administration. Features student profiles, school management dashboards, structured student-record workflows, API communication, responsive Tailwind CSS interfaces, and PostgreSQL storage hosted on Neon."
+  },
+  {
+    "title": "Pro Healium Pharmacy Management System",
+    "category": "laravel",
+    "image": "images/refference/noimg.png",
+    "source": "https://pro-healium.vercel.app/",
+    "type": "Full-Stack Pharmacy Management System",
+    "description": "A pharmacy management platform built with a Laravel REST API and Next.js client to support medicine inventory, sales, and daily pharmacy operations. Features pharmaceutical product and stock tracking, sales and transaction management, operational dashboards, responsive Tailwind CSS interfaces, and PostgreSQL storage hosted on Neon."
   }
 ]
