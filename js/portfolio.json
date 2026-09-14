@@ -14,7 +14,7 @@
     "image": "images/refference/ims.PNG",
     "source": "https://ims-rho-rosy.vercel.app/",
     "type": "Full-Stack Business Management System",
-    "description": "A comprehensive inventory and business management system built with a Laravel REST API and Next.js client. Features stock management, sales and purchases, branch-to-branch stock transfers, sales and purchase returns, inventory calculations, transaction tracking, and operational dashboards using PostgreSQL hosted on Neon."
+    "description": "A comprehensive inventory and business management system built with a Laravel REST API and Next.js client. Features stock management, sales and purchases, branch-to-branch stock transfers, sales and purchase returns, inventory calculations, transaction tracking, and operational dashboards using PostgreSQL hosted on Neon. Demo shop owner access: demoshop@ims.com / password."
   },
   {
     "title": "Anaby Green Company Website",
@@ -30,7 +30,7 @@
     "image": "images/refference/Capture.PNG",
     "source": "https://onesmsui.vercel.app/",
     "type": "Full-Stack Student Management System",
-    "description": "A student management platform built with a Laravel REST API and Next.js client for managing student information and school administration. Features student profiles, school management dashboards, structured student-record workflows, API communication, responsive Tailwind CSS interfaces, and PostgreSQL storage hosted on Neon."
+    "description": "A student management platform built with a Laravel REST API and Next.js client for managing student information and school administration. Features student profiles, school management dashboards, structured student-record workflows, API communication, responsive Tailwind CSS interfaces, and PostgreSQL storage hosted on Neon. Demo admin access: admin@onesms.local / password."
   },
   {
     "title": "Pro Healium Pharmacy Management System",
@@ -38,7 +38,7 @@
     "image": "images/refference/prohealium.PNG",
     "source": "https://pro-healium.vercel.app/",
     "type": "Full-Stack Pharmacy Management System",
-    "description": "A pharmacy management platform built with a Laravel REST API and Next.js client to support medicine inventory, sales, and daily pharmacy operations. Features pharmaceutical product and stock tracking, sales and transaction management, operational dashboards, responsive Tailwind CSS interfaces, and PostgreSQL storage hosted on Neon."
+    "description": "A pharmacy management platform built with a Laravel REST API and Next.js client to support medicine inventory, sales, and daily pharmacy operations. Features pharmaceutical product and stock tracking, sales and transaction management, operational dashboards, responsive Tailwind CSS interfaces, and PostgreSQL storage hosted on Neon. Demo access: Admin admin@prohealium.com / password; Sales staff demo@prohealium.com / password."
   },
   {
     "title": "Ecommerce App",
