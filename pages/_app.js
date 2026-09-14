@@ -21,17 +21,6 @@ export default function App({ Component, pageProps }) {
       <Script src="/js/validate.js" strategy="afterInteractive" />
       <Script src="/js/portfolio.js" strategy="afterInteractive" />
       <Script src="/js/main.js" strategy="afterInteractive" />
-      <Script id="unhide-body" strategy="beforeInteractive">{`(function(){
-        try{
-          // Remove Next.js FOUC hiding style if present
-          var hides = document.querySelectorAll('[data-next-hide-fouc]');
-          hides.forEach(function(h){ if (h && h.parentNode) h.parentNode.removeChild(h); });
-          // Ensure body is visible for templates that expect it
-          document.body.style.display = 'block';
-          document.body.style.visibility = 'visible';
-          document.body.style.opacity = '1';
-        }catch(e){ /* ignore */ }
-      })();`}</Script>
 
       <Component {...pageProps} />
     </>

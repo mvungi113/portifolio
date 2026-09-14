@@ -134,33 +134,6 @@
   });
 
   /**
-   * Preloader
-   * Ensure preloader is removed even if scripts run after the window 'load' event
-   */
-  let preloader = select('#preloader');
-  if (preloader) {
-    const removePreloader = () => {
-      try {
-        if (preloader && preloader.parentNode) preloader.parentNode.removeChild(preloader);
-        // Ensure body is visible for migrated templates
-        document.body.style.display = 'block';
-        document.body.style.visibility = 'visible';
-        document.body.style.opacity = '1';
-        // Remove any Next.js FOUC style nodes if present
-        var hides = document.querySelectorAll('[data-next-hide-fouc]');
-        hides.forEach(function(h){ if (h && h.parentNode) h.parentNode.removeChild(h); });
-      } catch (e) {
-        // ignore
-      }
-    };
-    if (document.readyState === 'complete') {
-      removePreloader();
-    } else {
-      runOnLoad(removePreloader);
-    }
-  }
-
-  /**
    * Hero type effect
    */
   const typed = select('.typed')
@@ -271,6 +244,7 @@
       once: true,
       mirror: false
     })
+    document.body.classList.add('aos-enabled')
   });
 
   /**
